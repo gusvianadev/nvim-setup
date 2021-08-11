@@ -69,6 +69,22 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/neogit"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
@@ -93,6 +109,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -104,6 +124,10 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
