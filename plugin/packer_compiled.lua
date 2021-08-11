@@ -124,6 +124,14 @@ _G.packer_plugins = {
   ["vim-airline"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-airline"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 

@@ -18,6 +18,8 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
     use 'hrsh7th/nvim-compe'
     use {
       'nvim-telescope/telescope.nvim',
