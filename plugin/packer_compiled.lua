@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-compe"
@@ -77,9 +81,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-lua-guide"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-lua-guide"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -92,6 +104,26 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-airline"
   }
 }
 

@@ -11,12 +11,19 @@ end
 return require('packer').startup(function()
     -- Packer itself
     use 'wbthomason/packer.nvim'
-    -- Color scheme
+    -- Lua guide
+    use 'nanotee/nvim-lua-guide'
+    --
     use 'glepnir/oceanic-material'
-    -- Tree
-    use 'kyazdani42/nvim-web-devicons' 
+    use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
-    -- LSP
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-compe'
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim', 'nvim-telescope/telescope-media-files.nvim' }
+    }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'vim-airline/vim-airline'
+    use 'norcalli/nvim-colorizer.lua'
 end)

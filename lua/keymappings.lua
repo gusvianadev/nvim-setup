@@ -35,14 +35,20 @@ keymap('n', '<C-j>', '<C-w>j', opt)
 keymap('n', '<C-k>', '<C-w>k', opt)
 keymap('n', '<C-l>', '<C-w>l', opt)
 
--- Tree Toggle
-keymap('n', '<LEADER>tt', ':NvimTreeToggle<CR>', opt)
-
 -- Use alt + hjkl to resize windows
 keymap('n', '<M-j>', ':resize -2<CR>', opt)
 keymap('n', '<M-k>', ':resize +2<CR>', opt)
 keymap('n', '<M-h>', ':vertical resize -2<CR>', opt)
 keymap('n', '<M-l>', ':vertical resize +2<CR>', opt)
 
+-- Telescope
+keymap('n', '<LEADER>ff', ':Telescope git_files<CR>', opt)
+keymap('n', '<LEADER>fg', ':Telescope live_grep<CR>', opt)
+keymap('n', '<LEADER>fb', ':Telescope buffers<CR>', opt)
+keymap('n', '<LEADER>fh', ':Telescope help_tags<CR>', opt)
+
+-- Tree Toggle
+keymap('n', '<LEADER>tt', ':NvimTreeToggle<CR>', opt)
+
 -- <TAB> for autocomplete
-keymap('i', '<expr><TAB>', 'pumvisible() ? \'\\<C-n>\' : \'\\<TAB>\'', opt)
+-- keymap('i', '<expr><TAB>', 'pumvisible() ? \'\\<C-n>\' : \'\\<TAB>\'', opt)

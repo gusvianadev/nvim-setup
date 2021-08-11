@@ -1,4 +1,6 @@
 require('plugins')
-require('keymappings')
+require('colorscheme')
 require('settings')
+require('keymappings')
+require('lsp.lua-ls')
 require('nv-compe')
