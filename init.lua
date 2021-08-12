@@ -13,6 +13,7 @@ require( "nv-treesitter" )
 require( "nv-gitsigns" )
 require( "nv-nvim-autopairs" )
 require( "nv-formatter" )
+require( "nv-neogit" )
 
 -- LSP
 require( "nv-lspsaga" )
