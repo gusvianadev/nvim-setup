@@ -3,89 +3,83 @@ local keymap = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 
 -- Map leader to space
-keymap('n', '<Space>', '<NOP>', opt)
+keymap( "n", "<Space>", "<NOP>", opt )
 vim.g.mapleader = " "
 
 -- Press ii to return to normal mode in any mode
-keymap('i', 'ii', '<ESC>', opt)
-keymap('v', 'ii', '<ESC>', opt)
-keymap('c', 'ii', '<ESC>', opt)
+keymap( "i", "ii", "<ESC>", opt )
+keymap( "v", "ii", "<ESC>", opt )
+keymap( "c", "ii", "<ESC>", opt )
 
 -- Visual mode
-keymap('v', '<TAB>', '>gv', opt)
-keymap('v', '<S-TAB>', '<gv', opt)
-keymap('v', 'K', ':move \'<-2<CR>gv-gv\'', opt)
-keymap('v', 'J', ':move \'>+1<CR>gv-gv\'', opt)
-
--- Terminal mode
-keymap('n', '<LEADER>sh', ':terminal<CR>', opt)
-keymap('t', '<ESC>', '<C-\\><C-n>:bd!<CR>', opt)
+keymap( "v", "<TAB>", ">gv", opt )
+keymap( "v", "<S-TAB>", "<gv", opt )
+keymap( "v", "<S-k>", ":move '<-2<CR>gv-gv'", opt )
+keymap( "v", "<S-j>", ":move '>+1<CR>gv-gv'", opt )
 
 -- File management
-keymap('n', '<LEADER>sf', ':w<CR>', opt)
-keymap('n', '<LEADER>bd', ':bd<CR>', opt)
+keymap( "n", "<LEADER>sf", ":w<CR>", opt )
+keymap( "n", "<LEADER>bd", ":bd<CR>", opt )
 
 -- Buffer navigation
-keymap('n', '<TAB>', ':bnext<CR>', opt)
-keymap('n', '<S-TAB>', ':bprevious<CR>', opt)
+keymap( "n", "<TAB>", ":bnext<CR>", opt )
+keymap( "n", "<S-TAB>", ":bprevious<CR>", opt )
 
 -- Window navigation
-keymap('n', '<C-h>', '<C-w>h', opt)
-keymap('n', '<C-j>', '<C-w>j', opt)
-keymap('n', '<C-k>', '<C-w>k', opt)
-keymap('n', '<C-l>', '<C-w>l', opt)
+keymap( "n", "<C-h>", "<C-w>h", opt )
+keymap( "n", "<C-j>", "<C-w>j", opt )
+keymap( "n", "<C-k>", "<C-w>k", opt )
+keymap( "n", "<C-l>", "<C-w>l", opt )
 
 -- Use alt + hjkl to resize windows
-keymap('n', '<M-j>', ':resize -2<CR>', opt)
-keymap('n', '<M-k>', ':resize +2<CR>', opt)
-keymap('n', '<M-h>', ':vertical resize -2<CR>', opt)
-keymap('n', '<M-l>', ':vertical resize +2<CR>', opt)
+keymap( "n", "<M-j>", ":resize -2<CR>", opt )
+keymap( "n", "<M-k>", ":resize +2<CR>", opt )
+keymap( "n", "<M-h>", ":vertical resize -2<CR>", opt )
+keymap( "n", "<M-l>", ":vertical resize +2<CR>", opt )
 
 -- Telescope
-keymap('n', '<LEADER>ff', ':Telescope git_files<CR>', opt)
-keymap('n', '<LEADER>fg', ':Telescope live_grep<CR>', opt)
-keymap('n', '<LEADER>fb', ':Telescope buffers<CR>', opt)
-keymap('n', '<LEADER>fh', ':Telescope help_tags<CR>', opt)
+keymap( "n", "<LEADER>ff", ":Telescope git_files<CR>", opt )
+keymap( "n", "<LEADER>fg", ":Telescope live_grep<CR>", opt )
+keymap( "n", "<LEADER>fb", ":Telescope buffers<CR>", opt )
+keymap( "n", "<LEADER>fh", ":Telescope help_tags<CR>", opt )
+keymap( "n", "<LEADER>fk", ":Telescope keymaps<CR>", opt )
 
 -- Tree Toggle
-keymap('n', '<LEADER>tt', ':NvimTreeToggle<CR>', opt)
+keymap( "n", "<LEADER>tt", ":NvimTreeToggle<CR>", opt )
 
--- <TAB> for autocomplete
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
+-- LSP
+keymap( "n", "<LEADER>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt )
 
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
-end
-
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif vim.fn['vsnip#available'](1) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  elseif vim.fn['vsnip#jumpable'](-1) == 1 then
-    return t "<Plug>(vsnip-jump-prev)"
-  else
-    -- If <S-Tab> is not working in your terminal, change it to <C-h>
-    return t "<S-Tab>"
-  end
-end
-
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- LSP Saga
+keymap( "n", "<LEADER>gh",
+        "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opt )
+keymap( "n", "<LEADER>pd",
+        "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", opt )
+keymap( "n", "<LEADER>ca",
+        "<cmd>lua require'lspsaga.codeaction'.code_action()<CR>", opt )
+keymap( "v", "<LEADER>ca",
+        "<C-U>lua require'lspsaga.codeaction'.range_code_action()<CR>", opt )
+keymap( "n", "<LEADER>hd",
+        "<cmd>lua require'lspsaga.hover'.render_hover_doc()<CR>", opt )
+keymap( "n", "<C-k>",
+        "<cmd>lua require'lspsaga.action'.smart_scroll_with_saga(-1)<CR>", opt )
+keymap( "n", "<C-j>",
+        "<cmd>lua require'lspsaga.action'.smart_scroll_with_saga(1)<CR>", opt )
+keymap( "n", "<LEADER>gs",
+        "<cmd>lua require'lspsaga.signaturehelp'.signature_help()<CR>", opt )
+keymap( "n", "<LEADER>rs", "<cmd>lua require'lspsaga.rename'.rename()<CR>", opt )
+keymap( "n", "<LEADER>ld",
+        "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opt )
+keymap( "n", "<LEADER>cd",
+        "<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>",
+        opt )
+keymap( "n", "<C-p>",
+        "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>",
+        opt )
+keymap( "n", "<C-n>",
+        "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>",
+        opt )
+keymap( "n", "<LEADER>ft",
+        "<cmd>lua require'lspsaga.floaterm'.open_float_terminal()<CR>", opt )
+keymap( "t", "<ESC>",
+        "<cmd>lua require'lspsaga.floaterm'.close_float_terminal()<CR>", opt )

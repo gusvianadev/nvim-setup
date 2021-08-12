@@ -1,9 +1,9 @@
 local keymap = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 
-require("bufferline").setup{}
-keymap('n', '<TAB>', ':BufferLineCycleNext<CR>', opt)
-keymap('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', opt)
+require( "bufferline" ).setup {}
+keymap( "n", "<TAB>", ":BufferLineCycleNext<CR>", opt )
+keymap( "n", "<S-TAB>", ":BufferLineCyclePrev<CR>", opt )
 
 -- These commands will navigate through buffers in order regardless of which mode you are using
 -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
