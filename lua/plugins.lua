@@ -17,8 +17,6 @@ end
 return require( "packer" ).startup( function( use )
     -- Packer itself
     use "wbthomason/packer.nvim"
-    -- Plenary the most important plugins need it
-    use "nvim-lua/plenary.nvim"
     -- Lua guide
     use "nanotee/nvim-lua-guide"
     -- Colorscheme
@@ -35,8 +33,10 @@ return require( "packer" ).startup( function( use )
     use {
         "nvim-telescope/telescope.nvim",
         requires = {
-            "nvim-lua/popup.nvim",
-            "nvim-telescope/telescope-media-files.nvim"
+            {
+                "nvim-lua/plenary.nvim",
+                "nvim-telescope/telescope-media-files.nvim"
+            }
         }
     }
     -- LSP
@@ -54,7 +54,6 @@ return require( "packer" ).startup( function( use )
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
         requires = {
-            "nvim-treesitter/playground",
             "p00f/nvim-ts-rainbow",
             "windwp/nvim-ts-autotag",
             "norcalli/nvim-colorizer.lua",
@@ -64,5 +63,5 @@ return require( "packer" ).startup( function( use )
     -- Formatting
     use "mhartington/formatter.nvim"
     -- Git integrations
-    use { "TimUntersberger/neogit", requires = { "lewis6991/gitsigns.nvim" } }
+    use "lewis6991/gitsigns.nvim"
 end )

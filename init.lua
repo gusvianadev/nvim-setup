@@ -7,13 +7,12 @@ require( "keymappings" )
 -- PLUGINS
 require( "nv-nvim-tree" )
 require( "nv-compe" )
-require( "nv-colorizer" )
 require( "nv-bufferline" )
 require( "nv-treesitter" )
-require( "nv-gitsigns" )
+require( "nv-colorizer" )
 require( "nv-nvim-autopairs" )
 require( "nv-formatter" )
-require( "nv-neogit" )
+require( "nv-gitsigns" )
 
 -- LSP
 require( "nv-lspsaga" )

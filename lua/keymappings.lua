@@ -68,9 +68,7 @@ keymap( "n", "<C-p>",
 keymap( "n", "<C-n>",
         "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>",
         opt )
-keymap( "n", "<LEADER>ft",
+keymap( "n", "<LEADER>ot",
         "<cmd>lua require'lspsaga.floaterm'.open_float_terminal()<CR>", opt )
 keymap( "t", "<ESC>",
         "<cmd>lua require'lspsaga.floaterm'.close_float_terminal()<CR>", opt )
--- Neogit
-keymap( "n", "<LEADER>gg", ":Neogit <CR>", opt )
