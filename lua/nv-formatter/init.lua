@@ -44,6 +44,24 @@ require( "formatter" ).setup( {
                 }
             end
         },
+        typescript = {
+            function()
+                return {
+                    exe = "prettier",
+                    args = { vim.api.nvim_buf_get_name( 0 ) },
+                    stdin = true
+                }
+            end
+        },
+        typescriptreact = {
+            function()
+                return {
+                    exe = "prettier",
+                    args = { vim.api.nvim_buf_get_name( 0 ) },
+                    stdin = true
+                }
+            end
+        },
         json = {
             function()
                 return {

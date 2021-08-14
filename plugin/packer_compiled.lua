@@ -69,13 +69,25 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/formatter.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -84,6 +96,14 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/material.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -104,6 +124,10 @@ _G.packer_plugins = {
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-lua-guide"] = {
     loaded = true,
@@ -129,10 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  ["oceanic-material"] = {
-    loaded = true,
-    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/oceanic-material"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/packer.nvim"
@@ -140,6 +160,10 @@ _G.packer_plugins = {
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["spellsitter.nvim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/spellsitter.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
@@ -152,14 +176,6 @@ _G.packer_plugins = {
   ["vim-airline"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-airline"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-vsnip"
-  },
-  ["vim-vsnip-integ"] = {
-    loaded = true,
-    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 

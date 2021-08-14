@@ -20,7 +20,7 @@ return require( "packer" ).startup( function( use )
     -- Lua guide
     use "nanotee/nvim-lua-guide"
     -- Colorscheme
-    use "glepnir/oceanic-material"
+    use "marko-cerovac/material.nvim"
     -- Buffer utilities
     use "akinsho/nvim-bufferline.lua"
     use "vim-airline/vim-airline"
@@ -42,14 +42,23 @@ return require( "packer" ).startup( function( use )
     -- LSP
     use {
         "neovim/nvim-lspconfig",
-        requires = { "glepnir/lspsaga.nvim", "onsails/lspkind-nvim" }
+        requires = {
+            "kabouzeid/nvim-lspinstall",
+            "glepnir/lspsaga.nvim",
+            "onsails/lspkind-nvim",
+            "ray-x/lsp_signature.nvim"
+        }
     }
     -- Completion
     use {
         "hrsh7th/nvim-compe",
-        requires = { "hrsh7th/vim-vsnip", "hrsh7th/vim-vsnip-integ" }
+        requires = {
+            "L3MON4D3/LuaSnip",
+            "rafamadriz/friendly-snippets",
+            "folke/lua-dev.nvim"
+        }
     }
-    -- Text utilities
+    -- Syntax
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
@@ -57,11 +66,11 @@ return require( "packer" ).startup( function( use )
             "p00f/nvim-ts-rainbow",
             "windwp/nvim-ts-autotag",
             "norcalli/nvim-colorizer.lua",
-            "windwp/nvim-autopairs"
+            "lewis6991/spellsitter.nvim"
         }
     }
     -- Formatting
-    use "mhartington/formatter.nvim"
+    use { "mhartington/formatter.nvim", requires = { "windwp/nvim-autopairs" } }
     -- Git integrations
     use "lewis6991/gitsigns.nvim"
 end )

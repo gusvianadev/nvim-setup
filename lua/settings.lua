@@ -1,4 +1,4 @@
-local o = vim.o
+local o = vim.opt
 local go = vim.go
 
 o.syntax = "on"
@@ -9,7 +9,6 @@ o.cmdheight = 2
 o.colorcolumn = "80"
 o.conceallevel = 0
 o.cursorline = true
-vim.opt.formatoptions:remove( { "c", "r", "o" } )
 o.hidden = true
 o.incsearch = true
 o.ignorecase = true

@@ -11,10 +11,9 @@ keymap( "c", "ii", "<ESC>", opt )
 -- Visual mode
 keymap( "v", "<TAB>", ">gv", opt )
 keymap( "v", "<S-TAB>", "<gv", opt )
-keymap( "v", "<S-k>", ":move '<-2<CR>gv-gv'", opt )
-keymap( "v", "<S-j>", ":move '>+1<CR>gv-gv'", opt )
 -- File management
 keymap( "n", "<LEADER>sf", ":w<CR>", opt )
+keymap( "n", "<LEADER>so", ":luafile %<CR>", opt )
 keymap( "n", "<LEADER>bd", ":bd<CR>", opt )
 -- Buffer navigation
 keymap( "n", "<TAB>", ":bnext<CR>", opt )
@@ -24,13 +23,15 @@ keymap( "n", "<C-h>", "<C-w>h", opt )
 keymap( "n", "<C-j>", "<C-w>j", opt )
 keymap( "n", "<C-k>", "<C-w>k", opt )
 keymap( "n", "<C-l>", "<C-w>l", opt )
--- Use alt + hjkl to resize windows
+-- Use alt + (h, j, k, l) to resize windows
 keymap( "n", "<M-j>", ":resize -2<CR>", opt )
 keymap( "n", "<M-k>", ":resize +2<CR>", opt )
 keymap( "n", "<M-h>", ":vertical resize -2<CR>", opt )
 keymap( "n", "<M-l>", ":vertical resize +2<CR>", opt )
+-- Sync all plugins
+keymap( "n", "<LEADER>ps", ":PackerSync<CR>", opt )
 -- Telescope
-keymap( "n", "<LEADER>ff", ":Telescope git_files<CR>", opt )
+keymap( "n", "<LEADER>ff", ":Telescope find_files<CR>", opt )
 keymap( "n", "<LEADER>fg", ":Telescope live_grep<CR>", opt )
 keymap( "n", "<LEADER>fb", ":Telescope buffers<CR>", opt )
 keymap( "n", "<LEADER>fh", ":Telescope help_tags<CR>", opt )
