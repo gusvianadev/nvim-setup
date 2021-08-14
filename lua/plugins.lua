@@ -21,9 +21,13 @@ return require( "packer" ).startup( function( use )
     use "nanotee/nvim-lua-guide"
     -- Colorscheme
     use "marko-cerovac/material.nvim"
+    use "Mofiqul/dracula.nvim"
     -- Buffer utilities
     use "akinsho/nvim-bufferline.lua"
-    use "vim-airline/vim-airline"
+    use {
+        "hoob3rt/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    }
     -- File tree
     use {
         "kyazdani42/nvim-tree.lua",
@@ -46,8 +50,14 @@ return require( "packer" ).startup( function( use )
             "kabouzeid/nvim-lspinstall",
             "glepnir/lspsaga.nvim",
             "onsails/lspkind-nvim",
-            "ray-x/lsp_signature.nvim"
+            "ray-x/lsp_signature.nvim",
+            { "michaelb/sniprun", run = "bash ./install.sh" }
         }
+    }
+    -- Project Management
+    use {
+        "ahmedkhalf/project.nvim",
+        config = function() require( "project_nvim" ).setup {} end
     }
     -- Completion
     use {
@@ -58,7 +68,7 @@ return require( "packer" ).startup( function( use )
             "folke/lua-dev.nvim"
         }
     }
-    -- Syntax
+    -- Text tools
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
@@ -66,11 +76,15 @@ return require( "packer" ).startup( function( use )
             "p00f/nvim-ts-rainbow",
             "windwp/nvim-ts-autotag",
             "norcalli/nvim-colorizer.lua",
-            "lewis6991/spellsitter.nvim"
+            "lukas-reineke/indent-blankline.nvim",
+            "terrortylor/nvim-comment",
+            "edluffy/specs.nvim"
         }
     }
     -- Formatting
     use { "mhartington/formatter.nvim", requires = { "windwp/nvim-autopairs" } }
     -- Git integrations
     use "lewis6991/gitsigns.nvim"
+    -- Discord
+    use "andweeb/presence.nvim"
 end )

@@ -1,6 +1,7 @@
-require( "material" ).set()
+-- require( "material" ).set()
+vim.cmd [[colorscheme dracula]]
 
----[[
+--[[
 -- Config for "material"
 vim.g.material_style = "deep ocean"
 vim.g.material_italic_comments = true

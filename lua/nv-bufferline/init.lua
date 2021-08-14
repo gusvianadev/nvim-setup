@@ -1,20 +1,27 @@
 local keymap = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 
-require( "bufferline" ).setup {}
-keymap( "n", "<TAB>", ":BufferLineCycleNext<CR>", opt )
+require( "bufferline" ).setup {
+    options = {
+        diagnostics = "nvim_lsp",
+        diagnostics_indicator = function(count,
+                                         level,
+                                         diagnostics_dict,
+                                         context )
+            local s = " "
+            for e, n in pairs( diagnostics_dict ) do
+                local sym = e == "error" and " " or
+                                (e == "warning" and " " or "")
+                s = s .. n .. sym
+            end
+            return s
+        end,
+        offsets = {
+            { filetype = "NvimTree", text = "File Tree", highlight = "Directory" }
+        }
+    }
+}
 keymap( "n", "<S-TAB>", ":BufferLineCyclePrev<CR>", opt )
-
--- These commands will navigate through buffers in order regardless of which mode you are using
--- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
--- nnoremap <silent>[b :BufferLineCycleNext<CR>
--- nnoremap <silent>b] :BufferLineCyclePrev<CR>
-
--- These commands will move the current buffer backwards or forwards in the bufferline
--- nnoremap <silent><mymap> :BufferLineMoveNext<CR>
--- nnoremap <silent><mymap> :BufferLineMovePrev<CR>
-
--- These commands will sort buffers by directory, language, or a custom criteria
--- nnoremap <silent>be :BufferLineSortByExtension<CR>
--- nnoremap <silent>bd :BufferLineSortByDirectory<CR>
--- nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
+keymap( "n", "<TAB>", ":BufferLineCycleNext<CR>", opt )
+keymap( "n", "<LEADER><S-TAB>", ":BufferLineMovePrev<CR>", opt )
+keymap( "n", "<LEADER><TAB>", ":BufferLineMoveNext<CR>", opt )

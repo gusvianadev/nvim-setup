@@ -33,9 +33,9 @@ keymap( "n", "<LEADER>ps", ":PackerSync<CR>", opt )
 -- Telescope
 keymap( "n", "<LEADER>ff", ":Telescope find_files<CR>", opt )
 keymap( "n", "<LEADER>fg", ":Telescope live_grep<CR>", opt )
-keymap( "n", "<LEADER>fb", ":Telescope buffers<CR>", opt )
 keymap( "n", "<LEADER>fh", ":Telescope help_tags<CR>", opt )
 keymap( "n", "<LEADER>fk", ":Telescope keymaps<CR>", opt )
+keymap( "n", "<LEADER>fp", ":Telescope projects<CR>", opt )
 -- Tree Toggle
 keymap( "n", "<LEADER>tt", ":NvimTreeToggle<CR>", opt )
 -- LSP

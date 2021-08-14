@@ -1,4 +1,4 @@
-local au = require "helpers/augroup"
+local au = require( "helpers/augroup" )
 
 au( "highlight_on_yank", {
     {
@@ -14,5 +14,13 @@ au( "set_formatoptions", {
         events = { "BufEnter" },
         targets = { "*" },
         command = "set fo-=c fo-=r fo-=o"
+    }
+} )
+
+au( "set_iskeyword", {
+    {
+        events = { "BufEnter" },
+        targets = { "*" },
+        command = "set iskeyword-=_ iskeyword-=-"
     }
 } )
