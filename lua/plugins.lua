@@ -51,6 +51,7 @@ return require( "packer" ).startup( function( use )
             "glepnir/lspsaga.nvim",
             "onsails/lspkind-nvim",
             "ray-x/lsp_signature.nvim",
+            "kosayoda/nvim-lightbulb",
             { "michaelb/sniprun", run = "bash ./install.sh" }
         }
     }

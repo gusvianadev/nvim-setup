@@ -43,31 +43,18 @@ keymap( "n", "<LEADER>tt", ":NvimTreeToggle<CR>", opt )
 -- LSP
 keymap( "n", "<LEADER>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt )
 -- LSP Saga
-keymap( "n", "<LEADER>gh",
-        "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opt )
-keymap( "v", "<LEADER>ca",
-        "<C-U>lua require'lspsaga.codeaction'.range_code_action()<CR>", opt )
-keymap( "n", "<LEADER>hd",
-        "<cmd>lua require'lspsaga.hover'.render_hover_doc()<CR>", opt )
+keymap( "n", "<LEADER>gh", ":Lspsaga lsp_finder<CR>", opt )
+keymap( "n", "<LEADER>ca", ":Lspsaga code_action<CR>", opt )
+keymap( "n", "<LEADER>hd", ":Lspsaga hover_doc<CR>", opt )
 keymap( "n", "<C-p>",
-        "<cmd>lua require'lspsaga.action'.smart_scroll_with_saga(-1)<CR>", opt )
+        ":lua require'lspsaga.action'.smart_scroll_with_saga(-1)<CR>", opt )
 keymap( "n", "<C-n>",
-        "<cmd>lua require'lspsaga.action'.smart_scroll_with_saga(1)<CR>", opt )
-keymap( "n", "<LEADER>gs",
-        "<cmd>lua require'lspsaga.signaturehelp'.signature_help()<CR>", opt )
-keymap( "n", "<LEADER>rs", "<cmd>lua require'lspsaga.rename'.rename()<CR>", opt )
-keymap( "n", "<LEADER>ld",
-        "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", opt )
-keymap( "n", "<LEADER>cd",
-        "<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>",
-        opt )
-keymap( "n", "<C-p>",
-        "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>",
-        opt )
-keymap( "n", "<C-n>",
-        "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>",
-        opt )
-keymap( "n", "t",
-        "<cmd>lua require'lspsaga.floaterm'.open_float_terminal()<CR>", opt )
-keymap( "t", "<ESC>",
-        "<cmd>lua require'lspsaga.floaterm'.close_float_terminal()<CR>", opt )
+        ":lua require'lspsaga.action'.smart_scroll_with_saga(1)<CR>", opt )
+keymap( "n", "<LEADER>gs", ":Lspsaga signature_help<CR>", opt )
+keymap( "n", "<LEADER>rs", ":Lspsaga rename<CR>", opt )
+keymap( "n", "<LEADER>ld", ":Lspsaga show_line_diagnostics<CR>", opt )
+keymap( "n", "<LEADER>cd", ":Lspsaga show_cursor_diagnostics<CR>", opt )
+keymap( "n", "<C-p>", ":Lspsaga diagnostic_jump_prev<CR>", opt )
+keymap( "n", "<C-n>", ":Lspsaga diagnostic_jump_next<CR>", opt )
+keymap( "n", "t", ":Lspsaga open_floaterm<CR>", opt )
+keymap( "t", "<ESC>", ":Lspsaga close_floaterm<CR>", opt )
