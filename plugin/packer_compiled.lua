@@ -77,6 +77,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/dracula.nvim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/emmet-vim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/formatter.nvim"
