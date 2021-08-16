@@ -76,7 +76,6 @@ return require( "packer" ).startup( function( use )
             "p00f/nvim-ts-rainbow",
             "windwp/nvim-ts-autotag",
             "norcalli/nvim-colorizer.lua",
-            "lukas-reineke/indent-blankline.nvim",
             "terrortylor/nvim-comment",
             "edluffy/specs.nvim"
         }

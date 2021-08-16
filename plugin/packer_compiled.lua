@@ -89,10 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
-  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/gusvianadev/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
