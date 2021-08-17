@@ -1,5 +1,5 @@
 -- require( "material" ).set()
-vim.cmd [[colorscheme dracula]]
+vim.cmd([[colorscheme dracula]])
 
 --[[
 -- Config for "material"
