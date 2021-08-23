@@ -19,8 +19,7 @@ return require("packer").startup(function(use)
 	-- Lua guide
 	use("nanotee/nvim-lua-guide")
 	-- Colorscheme
-	use("marko-cerovac/material.nvim")
-	use("Mofiqul/dracula.nvim")
+	use({ "Mofiqul/dracula.nvim", requires = { "xiyaowong/nvim-transparent" } })
 	-- Buffer utilities
 	use("akinsho/nvim-bufferline.lua")
 	use({
@@ -82,6 +81,7 @@ return require("packer").startup(function(use)
 			"norcalli/nvim-colorizer.lua",
 			"terrortylor/nvim-comment",
 			"edluffy/specs.nvim",
+			"rktjmp/highlight-current-n.nvim",
 		},
 	})
 	-- Formatting
@@ -90,4 +90,6 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	-- Discord
 	use("andweeb/presence.nvim")
+	-- Live server
+	use("turbio/bracey.vim")
 end)

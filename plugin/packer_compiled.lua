@@ -73,6 +73,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
+  ["bracey.vim"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/bracey.vim"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/dracula.nvim"
@@ -93,6 +97,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  ["highlight-current-n.nvim"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/highlight-current-n.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
@@ -112,10 +120,6 @@ _G.packer_plugins = {
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  ["material.nvim"] = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/material.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -152,6 +156,10 @@ _G.packer_plugins = {
   ["nvim-lua-guide"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-lua-guide"
+  },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

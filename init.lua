@@ -22,6 +22,7 @@ require("nv-nvim-comment")
 require("nv-formatter")
 require("nv-gitsigns")
 require("nv-presence")
+require("nv-transparent")
 
 -- LSP
 require("lsp-setup")

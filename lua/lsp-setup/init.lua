@@ -49,7 +49,9 @@ local function setup_servers()
 end
 
 setup_servers()
-require("lsp_signature").setup()
+require("lsp_signature").setup({
+	trigger_on_newline = false,
+})
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
 require("lspinstall").post_install_hook = function()
