@@ -6,7 +6,6 @@ require("keymappings")
 require("augroups")
 
 -- PLUGINS
-require("nv-lua-dev")
 require("nv-telescope")
 require("nv-nvim-tree")
 require("nv-compe")

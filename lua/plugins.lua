@@ -67,7 +67,6 @@ return require("packer").startup(function(use)
 		requires = {
 			"L3MON4D3/LuaSnip",
 			"rafamadriz/friendly-snippets",
-			"folke/lua-dev.nvim",
 			"mattn/emmet-vim",
 		},
 	})

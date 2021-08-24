@@ -113,10 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
-  ["lua-dev.nvim"] = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/lualine.nvim"
