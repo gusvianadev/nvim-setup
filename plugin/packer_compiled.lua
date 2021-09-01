@@ -69,13 +69,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/LuaSnip"
-  },
   ["bracey.vim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/bracey.vim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
   },
   ["dracula.nvim"] = {
     loaded = true,
@@ -125,6 +129,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
@@ -132,10 +140,6 @@ _G.packer_plugins = {
   ["nvim-comment"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-comment"
-  },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lightbulb"] = {
     loaded = true,
@@ -148,10 +152,6 @@ _G.packer_plugins = {
   ["nvim-lspinstall"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
-  },
-  ["nvim-lua-guide"] = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/nvim-lua-guide"
   },
   ["nvim-transparent"] = {
     loaded = true,
@@ -209,6 +209,18 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+  },
+  ["vscode-go"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/vscode-go"
   }
 }
 

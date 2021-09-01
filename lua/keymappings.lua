@@ -67,7 +67,7 @@ keymap("n", "<LEADER>ld", ":Lspsaga show_line_diagnostics<CR>", opt)
 keymap("n", "<LEADER>cd", ":Lspsaga show_cursor_diagnostics<CR>", opt)
 keymap("n", "<C-p>", ":Lspsaga diagnostic_jump_prev<CR>", opt)
 keymap("n", "<C-n>", ":Lspsaga diagnostic_jump_next<CR>", opt)
-keymap("n", "t", ":Lspsaga open_floaterm<CR>", opt)
+keymap("n", "<LEADER>ft", ":Lspsaga open_floaterm<CR>", opt)
 keymap("t", "<ESC>", "<C-\\><C-n>:Lspsaga close_floaterm<CR>", opt)
 -- Highlight current n
 keymap("n", "n", "<Plug>(highlight-current-n-n)", {})

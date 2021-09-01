@@ -16,8 +16,6 @@ end
 return require("packer").startup(function(use)
 	-- Packer itself
 	use("wbthomason/packer.nvim")
-	-- Lua guide
-	use("nanotee/nvim-lua-guide")
 	-- Colorscheme
 	use({ "Mofiqul/dracula.nvim", requires = { "xiyaowong/nvim-transparent" } })
 	-- Buffer utilities
@@ -27,7 +25,6 @@ return require("packer").startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	-- File tree
-	use("kyazdani42/nvim-web-devicons")
 	use({
 		"kyazdani42/nvim-tree.lua",
 		requires = { "kyazdani42/nvim-web-devicons" },
@@ -63,10 +60,18 @@ return require("packer").startup(function(use)
 	})
 	-- Completion
 	use({
-		"hrsh7th/nvim-compe",
+		"hrsh7th/nvim-cmp",
 		requires = {
-			"L3MON4D3/LuaSnip",
-			"rafamadriz/friendly-snippets",
+			"hrsh7th/cmp-buffer",
+			{
+				"hrsh7th/vim-vsnip",
+				requires = {
+					"hrsh7th/cmp-vsnip",
+					"rafamadriz/friendly-snippets",
+					"hrsh7th/vim-vsnip-integ",
+					"golang/vscode-go",
+				},
+			},
 			"mattn/emmet-vim",
 		},
 	})
