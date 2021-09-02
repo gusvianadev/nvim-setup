@@ -20,10 +20,11 @@ local lua_settings = {
 -- config that enables snippet support
 local function make_config()
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	capabilities.textDocument.completion.completionItem.snippetSupport = true
-	capabilities.textDocument.completion.completionItem.resolveSupport = {
-		properties = { "documentation", "detail", "additionalTextEdits" },
-	}
+	-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+	-- capabilities.textDocument.completion.completionItem.resolveSupport = {
+	-- 	properties = { "documentation", "detail", "additionalTextEdits" },
+	-- }
+	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 	return {
 		-- enable snippet support
 		capabilities = capabilities,
@@ -49,9 +50,6 @@ local function setup_servers()
 end
 
 setup_servers()
-require("lsp_signature").setup({
-	trigger_on_newline = false,
-})
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
 require("lspinstall").post_install_hook = function()

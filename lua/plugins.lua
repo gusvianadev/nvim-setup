@@ -46,7 +46,6 @@ return require("packer").startup(function(use)
 			"kabouzeid/nvim-lspinstall",
 			"glepnir/lspsaga.nvim",
 			"onsails/lspkind-nvim",
-			"ray-x/lsp_signature.nvim",
 			"kosayoda/nvim-lightbulb",
 			{ "michaelb/sniprun", run = "bash ./install.sh" },
 		},
@@ -63,6 +62,7 @@ return require("packer").startup(function(use)
 		"hrsh7th/nvim-cmp",
 		requires = {
 			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
 			{
 				"hrsh7th/vim-vsnip",
 				requires = {

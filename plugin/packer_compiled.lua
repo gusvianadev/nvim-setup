@@ -77,6 +77,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
@@ -104,10 +112,6 @@ _G.packer_plugins = {
   ["highlight-current-n.nvim"] = {
     loaded = true,
     path = "/home/gus/.local/share/nvim/site/pack/packer/start/highlight-current-n.nvim"
-  },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "/home/gus/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
